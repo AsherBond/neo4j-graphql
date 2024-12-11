@@ -29,13 +29,15 @@ import type { EntityAdapter } from "../../schema-model/entity/EntityAdapter";
 import { ConcreteEntityAdapter } from "../../schema-model/entity/model-adapters/ConcreteEntityAdapter";
 import { InterfaceEntityAdapter } from "../../schema-model/entity/model-adapters/InterfaceEntityAdapter";
 import { UnionEntityAdapter } from "../../schema-model/entity/model-adapters/UnionEntityAdapter";
-import type { RelationshipAdapter } from "../../schema-model/relationship/model-adapters/RelationshipAdapter";
+import { RelationshipAdapter } from "../../schema-model/relationship/model-adapters/RelationshipAdapter";
 import type { RelationshipDeclarationAdapter } from "../../schema-model/relationship/model-adapters/RelationshipDeclarationAdapter";
-import { isUnionEntity } from "../../translate/queryAST/utils/is-union-entity";
 import type { Neo4jFeaturesSettings } from "../../types";
 import { getWhereFieldsForAttributes } from "../get-where-fields";
 import { withAggregateInputType } from "./aggregate-types";
-import { augmentWhereInputWithRelationshipFilters } from "./augment-where-input";
+import {
+    augmentWhereInputTypeWithConnectionFields,
+    augmentWhereInputTypeWithRelationshipFields,
+} from "./augment-where-input";
 
 function isEmptyObject(obj: Record<string, unknown>): boolean {
     return !Object.keys(obj).length;
@@ -95,7 +97,6 @@ export function withWhereInputType({
         features,
         ignoreCypherFieldFilters,
     });
-
     if (returnUndefinedIfEmpty && isEmptyObject(whereFields)) {
         return undefined;
     }
@@ -105,16 +106,18 @@ export function withWhereInputType({
         fields: whereFields,
     });
 
-    const allowNesting = alwaysAllowNesting || !isUnionEntity(entityAdapter);
+    const allowNesting =
+        alwaysAllowNesting ||
+        entityAdapter instanceof ConcreteEntityAdapter ||
+        entityAdapter instanceof RelationshipAdapter ||
+        entityAdapter instanceof InterfaceEntityAdapter;
 
     if (allowNesting) {
         addLogicalOperatorsToWhereInputType(whereInputType);
     }
-
     if (entityAdapter instanceof ConcreteEntityAdapter && entityAdapter.isGlobalNode()) {
         whereInputType.addFields({ id: GraphQLID });
     }
-
     if (entityAdapter instanceof InterfaceEntityAdapter) {
         const enumValues = Object.fromEntries(
             entityAdapter.concreteEntities.map((concreteEntity) => [
@@ -176,7 +179,11 @@ export function withSourceWhereInputType({
     const relationshipTarget = relationshipAdapter.target;
     const relationshipSource = relationshipAdapter.source;
     const whereInput = composer.getITC(relationshipSource.operations.whereInputTypeName);
-    augmentWhereInputWithRelationshipFilters({ whereInput, relationshipAdapter, deprecatedDirectives, composer });
+    const fields = augmentWhereInputTypeWithRelationshipFields(relationshipAdapter, deprecatedDirectives);
+    whereInput.addFields(fields);
+
+    const connectionFields = augmentWhereInputTypeWithConnectionFields(relationshipAdapter, deprecatedDirectives);
+    whereInput.addFields(connectionFields);
 
     // TODO: Current unions are not supported as relationship targets beyond the above fields
     if (relationshipTarget instanceof UnionEntityAdapter) {

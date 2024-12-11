@@ -18,27 +18,30 @@
  */
 
 import Cypher from "@neo4j/cypher-builder";
-import { hasTarget } from "../../../utils/context-has-target";
-import type { QueryASTContext } from "../../QueryASTContext";
-import type { QueryASTNode } from "../../QueryASTNode";
 import type { FilterOperator } from "../Filter";
 import { Filter } from "../Filter";
+import type { QueryASTContext } from "../../QueryASTContext";
+import type { QueryASTNode } from "../../QueryASTNode";
+import { hasTarget } from "../../../utils/context-has-target";
 
 export class CountFilter extends Filter {
     protected comparisonValue: unknown;
     protected operator: FilterOperator;
+    protected isNot: boolean; // _NOT is deprecated
 
     constructor({
+        isNot,
         operator,
         comparisonValue,
     }: {
         operator: FilterOperator;
-
+        isNot: boolean;
         comparisonValue: unknown;
     }) {
         super();
         this.comparisonValue = comparisonValue;
         this.operator = operator;
+        this.isNot = isNot;
     }
 
     public getPredicate(queryASTContext: QueryASTContext): Cypher.Predicate | undefined {
@@ -55,7 +58,7 @@ export class CountFilter extends Filter {
     }
 
     public print(): string {
-        return `${super.print()} <${this.operator}>`;
+        return `${super.print()} <${this.isNot ? "NOT " : ""}${this.operator}>`;
     }
 
     /** Returns the default operation for a given filter */

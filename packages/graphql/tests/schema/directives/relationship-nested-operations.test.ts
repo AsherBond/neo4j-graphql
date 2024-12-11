@@ -125,25 +125,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -179,17 +160,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 type MovieAggregateSelection {
@@ -231,9 +201,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -495,25 +463,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -557,17 +506,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -616,9 +554,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -884,25 +820,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -942,17 +859,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -1001,9 +907,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -1269,25 +1173,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -1323,17 +1208,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateConnectionInput {
@@ -1385,9 +1259,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -1649,25 +1521,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -1707,17 +1560,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -1769,9 +1611,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -2033,25 +1873,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -2091,17 +1912,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -2149,9 +1959,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -2414,25 +2222,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -2468,17 +2257,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 type MovieAggregateSelection {
@@ -2520,9 +2298,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -2786,25 +2562,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -2852,17 +2609,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 type MovieAggregateSelection {
                   count: Int!
                   id: IDAggregateSelection!
@@ -2903,9 +2649,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -3184,25 +2928,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -3255,17 +2980,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateConnectionInput {
@@ -3336,25 +3050,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieProducersConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  all: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  none: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  single: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  some: MovieProducersConnectionWhere
-                }
-
                 input MovieProducersConnectionSort {
                   node: PersonSort
                 }
@@ -3396,17 +3091,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieProducersRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieProducersUpdateFieldInput {
                   disconnect: [MovieProducersDisconnectFieldInput!]
                   where: MovieProducersConnectionWhere
@@ -3430,9 +3114,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -3463,9 +3145,7 @@ describe("Relationship nested operations", () => {
                   id_EQ: ID
                   id_IN: [ID]
                   id_STARTS_WITH: ID
-                  producers: MovieProducersRelationshipFilters
                   producersAggregate: MovieProducersAggregateInput
-                  producersConnection: MovieProducersConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieProducersConnections match this filter
                   \\"\\"\\"
@@ -3729,25 +3409,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -3791,17 +3452,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -3860,25 +3510,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieProducersConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  all: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  none: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  single: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  some: MovieProducersConnectionWhere
-                }
-
                 input MovieProducersConnectionSort {
                   node: PersonSort
                 }
@@ -3920,17 +3551,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieProducersRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieProducersUpdateFieldInput {
                   disconnect: [MovieProducersDisconnectFieldInput!]
                   where: MovieProducersConnectionWhere
@@ -3954,9 +3574,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -3987,9 +3605,7 @@ describe("Relationship nested operations", () => {
                   id_EQ: ID
                   id_IN: [ID]
                   id_STARTS_WITH: ID
-                  producers: MovieProducersRelationshipFilters
                   producersAggregate: MovieProducersAggregateInput
-                  producersConnection: MovieProducersConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieProducersConnections match this filter
                   \\"\\"\\"
@@ -4250,25 +3866,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -4291,17 +3888,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 type MovieAggregateSelection {
@@ -4334,8 +3920,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -4662,25 +4246,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -4736,17 +4301,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -4784,8 +4338,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -5112,25 +4664,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -5186,17 +4719,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -5234,8 +4756,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -5570,25 +5090,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -5631,17 +5132,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -5678,8 +5168,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -6006,25 +5494,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -6072,17 +5541,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -6123,8 +5581,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -6451,25 +5907,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -6512,17 +5949,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -6559,8 +5985,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -6888,25 +6312,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -6929,17 +6334,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 type MovieAggregateSelection {
@@ -6972,8 +6366,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -7303,25 +6695,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -7344,17 +6717,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 type MovieAggregateSelection {
@@ -7387,8 +6749,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -7736,25 +7096,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -7857,17 +7198,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -7896,25 +7226,6 @@ describe("Relationship nested operations", () => {
                   edges: [MovieProducersRelationship!]!
                   pageInfo: PageInfo!
                   totalCount: Int!
-                }
-
-                input MovieProducersConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  all: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  none: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  single: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  some: MovieProducersConnectionWhere
                 }
 
                 input MovieProducersConnectionWhere {
@@ -7959,17 +7270,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieProducersRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieProducersUpdateInput {
                   PersonOne: [MovieProducersPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieProducersPersonTwoUpdateFieldInput!]
@@ -7993,8 +7293,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -8025,8 +7323,6 @@ describe("Relationship nested operations", () => {
                   id_EQ: ID
                   id_IN: [ID]
                   id_STARTS_WITH: ID
-                  producers: MovieProducersRelationshipFilters
-                  producersConnection: MovieProducersConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieProducersConnections match this filter
                   \\"\\"\\"
@@ -8358,25 +7654,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionWhere {
                   PersonOne: MovieActorsPersonOneConnectionWhere
                   PersonTwo: MovieActorsPersonTwoConnectionWhere
@@ -8432,17 +7709,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieActorsUpdateInput {
                   PersonOne: [MovieActorsPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieActorsPersonTwoUpdateFieldInput!]
@@ -8467,25 +7733,6 @@ describe("Relationship nested operations", () => {
                   edges: [MovieProducersRelationship!]!
                   pageInfo: PageInfo!
                   totalCount: Int!
-                }
-
-                input MovieProducersConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  all: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  none: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  single: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  some: MovieProducersConnectionWhere
                 }
 
                 input MovieProducersConnectionWhere {
@@ -8530,17 +7777,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieProducersRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieProducersUpdateInput {
                   PersonOne: [MovieProducersPersonOneUpdateFieldInput!]
                   PersonTwo: [MovieProducersPersonTwoUpdateFieldInput!]
@@ -8564,8 +7800,6 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -8596,8 +7830,6 @@ describe("Relationship nested operations", () => {
                   id_EQ: ID
                   id_IN: [ID]
                   id_STARTS_WITH: ID
-                  producers: MovieProducersRelationshipFilters
-                  producersConnection: MovieProducersConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieProducersConnections match this filter
                   \\"\\"\\"
@@ -8954,25 +8186,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -9008,17 +8221,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 type MovieAggregateSelection {
@@ -9060,9 +8262,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -9467,25 +8667,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -9529,17 +8710,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -9588,9 +8758,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -10004,25 +9172,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -10062,17 +9211,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -10121,9 +9259,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -10532,25 +9668,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -10586,17 +9703,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateConnectionInput {
@@ -10648,9 +9754,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -11060,25 +10164,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -11118,17 +10203,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -11180,9 +10254,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -11587,25 +10659,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -11645,17 +10698,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -11703,9 +10745,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -12118,25 +11158,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -12189,17 +11210,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateConnectionInput {
@@ -12270,25 +11280,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieProducersConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  all: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  none: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  single: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  some: MovieProducersConnectionWhere
-                }
-
                 input MovieProducersConnectionSort {
                   node: PersonSort
                 }
@@ -12330,17 +11321,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieProducersRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieProducersUpdateFieldInput {
                   disconnect: [MovieProducersDisconnectFieldInput!]
                   where: MovieProducersConnectionWhere
@@ -12364,9 +11344,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -12397,9 +11375,7 @@ describe("Relationship nested operations", () => {
                   id_EQ: ID
                   id_IN: [ID]
                   id_STARTS_WITH: ID
-                  producers: MovieProducersRelationshipFilters
                   producersAggregate: MovieProducersAggregateInput
-                  producersConnection: MovieProducersConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieProducersConnections match this filter
                   \\"\\"\\"
@@ -12817,25 +11793,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieActorsConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  all: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  none: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  single: MovieActorsConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieActorsConnections match this filter
-                  \\"\\"\\"
-                  some: MovieActorsConnectionWhere
-                }
-
                 input MovieActorsConnectionSort {
                   node: PersonSort
                 }
@@ -12883,17 +11840,6 @@ describe("Relationship nested operations", () => {
                 type MovieActorsRelationship {
                   cursor: String!
                   node: Person!
-                }
-
-                input MovieActorsRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
                 }
 
                 input MovieActorsUpdateFieldInput {
@@ -12957,25 +11903,6 @@ describe("Relationship nested operations", () => {
                   totalCount: Int!
                 }
 
-                input MovieProducersConnectionFilters {
-                  \\"\\"\\"
-                  Return Movies where all of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  all: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where none of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  none: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where one of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  single: MovieProducersConnectionWhere
-                  \\"\\"\\"
-                  Return Movies where some of the related MovieProducersConnections match this filter
-                  \\"\\"\\"
-                  some: MovieProducersConnectionWhere
-                }
-
                 input MovieProducersConnectionSort {
                   node: PersonSort
                 }
@@ -13017,17 +11944,6 @@ describe("Relationship nested operations", () => {
                   node: Person!
                 }
 
-                input MovieProducersRelationshipFilters {
-                  \\"\\"\\"Return Movies where all of the related People match this filter\\"\\"\\"
-                  all: PersonWhere
-                  \\"\\"\\"Return Movies where none of the related People match this filter\\"\\"\\"
-                  none: PersonWhere
-                  \\"\\"\\"Return Movies where one of the related People match this filter\\"\\"\\"
-                  single: PersonWhere
-                  \\"\\"\\"Return Movies where some of the related People match this filter\\"\\"\\"
-                  some: PersonWhere
-                }
-
                 input MovieProducersUpdateFieldInput {
                   disconnect: [MovieProducersDisconnectFieldInput!]
                   where: MovieProducersConnectionWhere
@@ -13051,9 +11967,7 @@ describe("Relationship nested operations", () => {
                   AND: [MovieWhere!]
                   NOT: MovieWhere
                   OR: [MovieWhere!]
-                  actors: MovieActorsRelationshipFilters
                   actorsAggregate: MovieActorsAggregateInput
-                  actorsConnection: MovieActorsConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieActorsConnections match this filter
                   \\"\\"\\"
@@ -13084,9 +11998,7 @@ describe("Relationship nested operations", () => {
                   id_EQ: ID
                   id_IN: [ID]
                   id_STARTS_WITH: ID
-                  producers: MovieProducersRelationshipFilters
                   producersAggregate: MovieProducersAggregateInput
-                  producersConnection: MovieProducersConnectionFilters
                   \\"\\"\\"
                   Return Movies where all of the related MovieProducersConnections match this filter
                   \\"\\"\\"

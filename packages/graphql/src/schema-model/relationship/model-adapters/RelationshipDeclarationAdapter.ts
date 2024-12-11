@@ -21,6 +21,7 @@ import { RelationshipNestedOperationsOption } from "../../../constants";
 import type { Annotations } from "../../annotation/Annotation";
 import type { Argument } from "../../argument/Argument";
 import type { AttributeAdapter } from "../../attribute/model-adapters/AttributeAdapter";
+import { ListFiltersAdapter } from "../../attribute/model-adapters/ListFiltersAdapter";
 import type { Entity } from "../../entity/Entity";
 import type { EntityAdapter } from "../../entity/EntityAdapter";
 import { ConcreteEntityAdapter } from "../../entity/model-adapters/ConcreteEntityAdapter";
@@ -34,6 +35,7 @@ import { RelationshipAdapter } from "./RelationshipAdapter";
 import { RelationshipDeclarationOperations } from "./RelationshipDeclarationOperations";
 
 export class RelationshipDeclarationAdapter {
+    private _listFiltersModel: ListFiltersAdapter | undefined;
     public readonly name: string;
     public readonly source: EntityAdapter;
     private rawEntity: Entity;
@@ -87,6 +89,16 @@ export class RelationshipDeclarationAdapter {
             (r) => new RelationshipAdapter(r)
         );
         this.firstDeclaredInTypeName = firstDeclaredInTypeName;
+    }
+
+    public get listFiltersModel(): ListFiltersAdapter | undefined {
+        if (!this._listFiltersModel) {
+            if (!this.isList) {
+                return;
+            }
+            this._listFiltersModel = new ListFiltersAdapter(this);
+        }
+        return this._listFiltersModel;
     }
 
     public get operations(): RelationshipDeclarationOperations {

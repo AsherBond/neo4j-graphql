@@ -24,10 +24,14 @@ import { RelationshipFilter } from "../RelationshipFilter";
 
 export class AuthRelationshipFilter extends RelationshipFilter {
     public getPredicate(queryASTContext: QueryASTContext): Cypher.Predicate | undefined {
-        if (this.subqueryPredicate) {
-            return this.subqueryPredicate;
-        }
+        if (this.subqueryPredicate) return this.subqueryPredicate;
         const nestedContext = this.getNestedContext(queryASTContext);
+
+        if (this.shouldCreateOptionalMatch()) {
+            const predicates = this.targetNodeFilters.map((c) => c.getPredicate(nestedContext));
+            const innerPredicate = Cypher.and(...predicates);
+            return Cypher.and(Cypher.neq(this.countVariable, new Cypher.Literal(0)), innerPredicate);
+        }
 
         const pattern = new Cypher.Pattern(nestedContext.source as Cypher.Node)
             .related({
@@ -40,7 +44,9 @@ export class AuthRelationshipFilter extends RelationshipFilter {
 
         const predicate = this.createRelationshipOperation(pattern, nestedContext);
 
-        return predicate;
+        if (!predicate) return undefined;
+
+        return this.wrapInNotIfNeeded(predicate);
     }
 
     protected createRelationshipOperation(
@@ -49,11 +55,15 @@ export class AuthRelationshipFilter extends RelationshipFilter {
     ): Cypher.Predicate | undefined {
         const predicates = this.targetNodeFilters.map((c) => c.getPredicate(queryASTContext));
         const innerPredicate = Cypher.and(...predicates);
-        if (!innerPredicate) {
-            return;
-        }
+        if (!innerPredicate) return undefined;
+        const useExist = queryASTContext.neo4jGraphQLContext.neo4jDatabaseInfo?.gte("5.0");
         switch (this.operator) {
             case "ALL": {
+                if (!useExist) {
+                    const patternComprehension = new Cypher.PatternComprehension(pattern).map(new Cypher.Literal(1));
+                    const sizeFunction = Cypher.size(patternComprehension.where(Cypher.not(innerPredicate)));
+                    return Cypher.eq(sizeFunction, new Cypher.Literal(0));
+                }
                 const match = new Cypher.Match(pattern).where(innerPredicate);
                 const negativeMatch = new Cypher.Match(pattern).where(Cypher.not(innerPredicate));
                 // Testing "ALL" requires testing that at least one element exists and that no elements not matching the filter exists
@@ -68,6 +78,18 @@ export class AuthRelationshipFilter extends RelationshipFilter {
             }
             case "NONE":
             case "SOME": {
+                if (!this.relationship.isList && this.relationship.isNullable) {
+                    return this.getSingleRelationshipOperation({
+                        pattern,
+                        queryASTContext,
+                        innerPredicate,
+                    });
+                }
+                if (!useExist) {
+                    const patternComprehension = new Cypher.PatternComprehension(pattern).map(new Cypher.Literal(1));
+                    const sizeFunction = Cypher.size(patternComprehension.where(innerPredicate));
+                    return Cypher.gt(sizeFunction, new Cypher.Literal(0));
+                }
                 const matchClause = new Cypher.Match(pattern).where(innerPredicate);
                 const existsPredicate = new Cypher.Exists(matchClause);
                 return existsPredicate;

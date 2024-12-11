@@ -165,25 +165,6 @@ describe("Interfaces", () => {
               where: MovieConnectWhere
             }
 
-            input MovieMoviesConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              all: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              none: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              single: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              some: MovieNodeMoviesConnectionWhere
-            }
-
             input MovieMoviesCreateFieldInput {
               node: MovieCreateInput!
             }
@@ -207,17 +188,6 @@ describe("Interfaces", () => {
               id_MIN_GTE: ID
               id_MIN_LT: ID
               id_MIN_LTE: ID
-            }
-
-            input MovieMoviesRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Movies match this filter\\"\\"\\"
-              all: MovieWhere
-              \\"\\"\\"Return Movies where none of the related Movies match this filter\\"\\"\\"
-              none: MovieWhere
-              \\"\\"\\"Return Movies where one of the related Movies match this filter\\"\\"\\"
-              single: MovieWhere
-              \\"\\"\\"Return Movies where some of the related Movies match this filter\\"\\"\\"
-              some: MovieWhere
             }
 
             input MovieMoviesUpdateConnectionInput {
@@ -272,25 +242,6 @@ describe("Interfaces", () => {
               totalCount: Int!
             }
 
-            input MovieNodeMoviesConnectionFilters {
-              \\"\\"\\"
-              Return MovieNodes where all of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              all: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return MovieNodes where none of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              none: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return MovieNodes where one of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              single: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return MovieNodes where some of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              some: MovieNodeMoviesConnectionWhere
-            }
-
             input MovieNodeMoviesConnectionSort {
               node: MovieSort
             }
@@ -333,17 +284,6 @@ describe("Interfaces", () => {
               node: Movie!
             }
 
-            input MovieNodeMoviesRelationshipFilters {
-              \\"\\"\\"Return MovieNodes where all of the related Movies match this filter\\"\\"\\"
-              all: MovieWhere
-              \\"\\"\\"Return MovieNodes where none of the related Movies match this filter\\"\\"\\"
-              none: MovieWhere
-              \\"\\"\\"Return MovieNodes where one of the related Movies match this filter\\"\\"\\"
-              single: MovieWhere
-              \\"\\"\\"Return MovieNodes where some of the related Movies match this filter\\"\\"\\"
-              some: MovieWhere
-            }
-
             \\"\\"\\"
             Fields to sort MovieNodes by. The order in which sorts are applied is not guaranteed when specifying many fields in one MovieNodeSort object.
             \\"\\"\\"
@@ -361,9 +301,7 @@ describe("Interfaces", () => {
               id_EQ: ID
               id_IN: [ID]
               id_STARTS_WITH: ID
-              movies: MovieNodeMoviesRelationshipFilters
               moviesAggregate: MovieNodeMoviesAggregateInput
-              moviesConnection: MovieNodeMoviesConnectionFilters
               \\"\\"\\"
               Return MovieNodes where all of the related MovieNodeMoviesConnections match this filter
               \\"\\"\\"
@@ -424,9 +362,7 @@ describe("Interfaces", () => {
               id_EQ: ID
               id_IN: [ID]
               id_STARTS_WITH: ID
-              movies: MovieMoviesRelationshipFilters
               moviesAggregate: MovieMoviesAggregateInput
-              moviesConnection: MovieMoviesConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related MovieNodeMoviesConnections match this filter
               \\"\\"\\"
@@ -652,25 +588,6 @@ describe("Interfaces", () => {
               where: MovieConnectWhere
             }
 
-            input MovieMoviesConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              all: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              none: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              single: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              some: MovieNodeMoviesConnectionWhere
-            }
-
             input MovieMoviesCreateFieldInput {
               node: MovieCreateInput!
             }
@@ -694,17 +611,6 @@ describe("Interfaces", () => {
               id_MIN_GTE: ID
               id_MIN_LT: ID
               id_MIN_LTE: ID
-            }
-
-            input MovieMoviesRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Movies match this filter\\"\\"\\"
-              all: MovieWhere
-              \\"\\"\\"Return Movies where none of the related Movies match this filter\\"\\"\\"
-              none: MovieWhere
-              \\"\\"\\"Return Movies where one of the related Movies match this filter\\"\\"\\"
-              single: MovieWhere
-              \\"\\"\\"Return Movies where some of the related Movies match this filter\\"\\"\\"
-              some: MovieWhere
             }
 
             input MovieMoviesUpdateConnectionInput {
@@ -759,25 +665,6 @@ describe("Interfaces", () => {
               totalCount: Int!
             }
 
-            input MovieNodeMoviesConnectionFilters {
-              \\"\\"\\"
-              Return MovieNodes where all of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              all: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return MovieNodes where none of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              none: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return MovieNodes where one of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              single: MovieNodeMoviesConnectionWhere
-              \\"\\"\\"
-              Return MovieNodes where some of the related MovieNodeMoviesConnections match this filter
-              \\"\\"\\"
-              some: MovieNodeMoviesConnectionWhere
-            }
-
             input MovieNodeMoviesConnectionSort {
               node: MovieSort
             }
@@ -820,17 +707,6 @@ describe("Interfaces", () => {
               node: Movie!
             }
 
-            input MovieNodeMoviesRelationshipFilters {
-              \\"\\"\\"Return MovieNodes where all of the related Movies match this filter\\"\\"\\"
-              all: MovieWhere
-              \\"\\"\\"Return MovieNodes where none of the related Movies match this filter\\"\\"\\"
-              none: MovieWhere
-              \\"\\"\\"Return MovieNodes where one of the related Movies match this filter\\"\\"\\"
-              single: MovieWhere
-              \\"\\"\\"Return MovieNodes where some of the related Movies match this filter\\"\\"\\"
-              some: MovieWhere
-            }
-
             \\"\\"\\"
             Fields to sort MovieNodes by. The order in which sorts are applied is not guaranteed when specifying many fields in one MovieNodeSort object.
             \\"\\"\\"
@@ -848,9 +724,7 @@ describe("Interfaces", () => {
               id_EQ: ID
               id_IN: [ID]
               id_STARTS_WITH: ID
-              movies: MovieNodeMoviesRelationshipFilters
               moviesAggregate: MovieNodeMoviesAggregateInput
-              moviesConnection: MovieNodeMoviesConnectionFilters
               \\"\\"\\"
               Return MovieNodes where all of the related MovieNodeMoviesConnections match this filter
               \\"\\"\\"
@@ -911,9 +785,7 @@ describe("Interfaces", () => {
               id_EQ: ID
               id_IN: [ID]
               id_STARTS_WITH: ID
-              movies: MovieMoviesRelationshipFilters
               moviesAggregate: MovieMoviesAggregateInput
-              moviesConnection: MovieMoviesConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related MovieNodeMoviesConnections match this filter
               \\"\\"\\"

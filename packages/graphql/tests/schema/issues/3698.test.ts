@@ -192,25 +192,6 @@ describe("https://github.com/neo4j/graphql/issues/3698", () => {
               totalCount: Int!
             }
 
-            input GenreProductConnectionFilters {
-              \\"\\"\\"
-              Return Genres where all of the related GenreProductConnections match this filter
-              \\"\\"\\"
-              all: GenreProductConnectionWhere
-              \\"\\"\\"
-              Return Genres where none of the related GenreProductConnections match this filter
-              \\"\\"\\"
-              none: GenreProductConnectionWhere
-              \\"\\"\\"
-              Return Genres where one of the related GenreProductConnections match this filter
-              \\"\\"\\"
-              single: GenreProductConnectionWhere
-              \\"\\"\\"
-              Return Genres where some of the related GenreProductConnections match this filter
-              \\"\\"\\"
-              some: GenreProductConnectionWhere
-            }
-
             input GenreProductConnectionSort {
               node: IProductSort
             }
@@ -295,17 +276,6 @@ describe("https://github.com/neo4j/graphql/issues/3698", () => {
               node: IProduct!
             }
 
-            input GenreProductRelationshipFilters {
-              \\"\\"\\"Return Genres where all of the related IProducts match this filter\\"\\"\\"
-              all: IProductWhere
-              \\"\\"\\"Return Genres where none of the related IProducts match this filter\\"\\"\\"
-              none: IProductWhere
-              \\"\\"\\"Return Genres where one of the related IProducts match this filter\\"\\"\\"
-              single: IProductWhere
-              \\"\\"\\"Return Genres where some of the related IProducts match this filter\\"\\"\\"
-              some: IProductWhere
-            }
-
             input GenreProductUpdateConnectionInput {
               node: IProductUpdateInput
             }
@@ -361,9 +331,7 @@ describe("https://github.com/neo4j/graphql/issues/3698", () => {
               name_EQ: String
               name_IN: [String!]
               name_STARTS_WITH: String
-              product: GenreProductRelationshipFilters
               productAggregate: GenreProductAggregateInput
-              productConnection: GenreProductConnectionFilters
               \\"\\"\\"
               Return Genres where all of the related GenreProductConnections match this filter
               \\"\\"\\"
@@ -546,25 +514,6 @@ describe("https://github.com/neo4j/graphql/issues/3698", () => {
               totalCount: Int!
             }
 
-            input MovieGenreConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related MovieGenreConnections match this filter
-              \\"\\"\\"
-              all: MovieGenreConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related MovieGenreConnections match this filter
-              \\"\\"\\"
-              none: MovieGenreConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related MovieGenreConnections match this filter
-              \\"\\"\\"
-              single: MovieGenreConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related MovieGenreConnections match this filter
-              \\"\\"\\"
-              some: MovieGenreConnectionWhere
-            }
-
             input MovieGenreConnectionSort {
               node: GenreSort
             }
@@ -630,17 +579,6 @@ describe("https://github.com/neo4j/graphql/issues/3698", () => {
               node: Genre!
             }
 
-            input MovieGenreRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Genres match this filter\\"\\"\\"
-              all: GenreWhere
-              \\"\\"\\"Return Movies where none of the related Genres match this filter\\"\\"\\"
-              none: GenreWhere
-              \\"\\"\\"Return Movies where one of the related Genres match this filter\\"\\"\\"
-              single: GenreWhere
-              \\"\\"\\"Return Movies where some of the related Genres match this filter\\"\\"\\"
-              some: GenreWhere
-            }
-
             input MovieGenreUpdateConnectionInput {
               node: GenreUpdateInput
             }
@@ -699,9 +637,7 @@ describe("https://github.com/neo4j/graphql/issues/3698", () => {
               AND: [MovieWhere!]
               NOT: MovieWhere
               OR: [MovieWhere!]
-              genre: MovieGenreRelationshipFilters
               genreAggregate: MovieGenreAggregateInput
-              genreConnection: MovieGenreConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related MovieGenreConnections match this filter
               \\"\\"\\"

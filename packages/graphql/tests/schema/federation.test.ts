@@ -147,25 +147,6 @@ describe("Apollo Federation", () => {
               totalCount: Int!
             }
 
-            input PostAuthorConnectionFilters {
-              \\"\\"\\"
-              Return Posts where all of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              all: PostAuthorConnectionWhere
-              \\"\\"\\"
-              Return Posts where none of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              none: PostAuthorConnectionWhere
-              \\"\\"\\"
-              Return Posts where one of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              single: PostAuthorConnectionWhere
-              \\"\\"\\"
-              Return Posts where some of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              some: PostAuthorConnectionWhere
-            }
-
             input PostAuthorConnectionSort {
               node: UserSort
             }
@@ -220,17 +201,6 @@ describe("Apollo Federation", () => {
             type PostAuthorRelationship {
               cursor: String!
               node: User!
-            }
-
-            input PostAuthorRelationshipFilters {
-              \\"\\"\\"Return Posts where all of the related Users match this filter\\"\\"\\"
-              all: UserWhere
-              \\"\\"\\"Return Posts where none of the related Users match this filter\\"\\"\\"
-              none: UserWhere
-              \\"\\"\\"Return Posts where one of the related Users match this filter\\"\\"\\"
-              single: UserWhere
-              \\"\\"\\"Return Posts where some of the related Users match this filter\\"\\"\\"
-              some: UserWhere
             }
 
             input PostAuthorUpdateConnectionInput {
@@ -298,9 +268,7 @@ describe("Apollo Federation", () => {
               AND: [PostWhere!]
               NOT: PostWhere
               OR: [PostWhere!]
-              author: PostAuthorRelationshipFilters
               authorAggregate: PostAuthorAggregateInput
-              authorConnection: PostAuthorConnectionFilters
               \\"\\"\\"
               Return Posts where all of the related PostAuthorConnections match this filter
               \\"\\"\\"
@@ -471,25 +439,6 @@ describe("Apollo Federation", () => {
               totalCount: Int!
             }
 
-            input UserPostsConnectionFilters {
-              \\"\\"\\"
-              Return Users where all of the related UserPostsConnections match this filter
-              \\"\\"\\"
-              all: UserPostsConnectionWhere
-              \\"\\"\\"
-              Return Users where none of the related UserPostsConnections match this filter
-              \\"\\"\\"
-              none: UserPostsConnectionWhere
-              \\"\\"\\"
-              Return Users where one of the related UserPostsConnections match this filter
-              \\"\\"\\"
-              single: UserPostsConnectionWhere
-              \\"\\"\\"
-              Return Users where some of the related UserPostsConnections match this filter
-              \\"\\"\\"
-              some: UserPostsConnectionWhere
-            }
-
             input UserPostsConnectionSort {
               node: PostSort
             }
@@ -546,17 +495,6 @@ describe("Apollo Federation", () => {
               node: Post!
             }
 
-            input UserPostsRelationshipFilters {
-              \\"\\"\\"Return Users where all of the related Posts match this filter\\"\\"\\"
-              all: PostWhere
-              \\"\\"\\"Return Users where none of the related Posts match this filter\\"\\"\\"
-              none: PostWhere
-              \\"\\"\\"Return Users where one of the related Posts match this filter\\"\\"\\"
-              single: PostWhere
-              \\"\\"\\"Return Users where some of the related Posts match this filter\\"\\"\\"
-              some: PostWhere
-            }
-
             input UserPostsUpdateConnectionInput {
               node: PostUpdateInput
             }
@@ -593,9 +531,7 @@ describe("Apollo Federation", () => {
               name_EQ: String
               name_IN: [String!]
               name_STARTS_WITH: String
-              posts: UserPostsRelationshipFilters
               postsAggregate: UserPostsAggregateInput
-              postsConnection: UserPostsConnectionFilters
               \\"\\"\\"
               Return Users where all of the related UserPostsConnections match this filter
               \\"\\"\\"
@@ -773,25 +709,6 @@ describe("Apollo Federation", () => {
               totalCount: Int!
             }
 
-            input PostAuthorConnectionFilters {
-              \\"\\"\\"
-              Return Posts where all of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              all: PostAuthorConnectionWhere
-              \\"\\"\\"
-              Return Posts where none of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              none: PostAuthorConnectionWhere
-              \\"\\"\\"
-              Return Posts where one of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              single: PostAuthorConnectionWhere
-              \\"\\"\\"
-              Return Posts where some of the related PostAuthorConnections match this filter
-              \\"\\"\\"
-              some: PostAuthorConnectionWhere
-            }
-
             input PostAuthorConnectionSort {
               node: UserSort
             }
@@ -844,17 +761,6 @@ describe("Apollo Federation", () => {
             type PostAuthorRelationship {
               cursor: String!
               node: User!
-            }
-
-            input PostAuthorRelationshipFilters {
-              \\"\\"\\"Return Posts where all of the related Users match this filter\\"\\"\\"
-              all: UserWhere
-              \\"\\"\\"Return Posts where none of the related Users match this filter\\"\\"\\"
-              none: UserWhere
-              \\"\\"\\"Return Posts where one of the related Users match this filter\\"\\"\\"
-              single: UserWhere
-              \\"\\"\\"Return Posts where some of the related Users match this filter\\"\\"\\"
-              some: UserWhere
             }
 
             input PostAuthorUpdateConnectionInput {
@@ -910,9 +816,7 @@ describe("Apollo Federation", () => {
               AND: [PostWhere!]
               NOT: PostWhere
               OR: [PostWhere!]
-              author: PostAuthorRelationshipFilters
               authorAggregate: PostAuthorAggregateInput
-              authorConnection: PostAuthorConnectionFilters
               \\"\\"\\"
               Return Posts where all of the related PostAuthorConnections match this filter
               \\"\\"\\"

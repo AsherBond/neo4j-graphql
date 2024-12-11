@@ -642,25 +642,6 @@ describe("String Comparators", () => {
               totalCount: Int!
             }
 
-            input ActorActedInConnectionFilters {
-              \\"\\"\\"
-              Return Actors where all of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              all: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where none of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              none: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where one of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              single: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where some of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              some: ActorActedInConnectionWhere
-            }
-
             input ActorActedInConnectionSort {
               edge: ActedInSort
               node: MovieSort
@@ -719,17 +700,6 @@ describe("String Comparators", () => {
               cursor: String!
               node: Movie!
               properties: ActedIn!
-            }
-
-            input ActorActedInRelationshipFilters {
-              \\"\\"\\"Return Actors where all of the related Movies match this filter\\"\\"\\"
-              all: MovieWhere
-              \\"\\"\\"Return Actors where none of the related Movies match this filter\\"\\"\\"
-              none: MovieWhere
-              \\"\\"\\"Return Actors where one of the related Movies match this filter\\"\\"\\"
-              single: MovieWhere
-              \\"\\"\\"Return Actors where some of the related Movies match this filter\\"\\"\\"
-              some: MovieWhere
             }
 
             input ActorActedInUpdateConnectionInput {
@@ -808,9 +778,7 @@ describe("String Comparators", () => {
               AND: [ActorWhere!]
               NOT: ActorWhere
               OR: [ActorWhere!]
-              actedIn: ActorActedInRelationshipFilters
               actedInAggregate: ActorActedInAggregateInput
-              actedInConnection: ActorActedInConnectionFilters
               \\"\\"\\"
               Return Actors where all of the related ActorActedInConnections match this filter
               \\"\\"\\"
@@ -925,25 +893,6 @@ describe("String Comparators", () => {
               totalCount: Int!
             }
 
-            input MovieActorsConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related MovieActorsConnections match this filter
-              \\"\\"\\"
-              all: MovieActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related MovieActorsConnections match this filter
-              \\"\\"\\"
-              none: MovieActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related MovieActorsConnections match this filter
-              \\"\\"\\"
-              single: MovieActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related MovieActorsConnections match this filter
-              \\"\\"\\"
-              some: MovieActorsConnectionWhere
-            }
-
             input MovieActorsConnectionSort {
               edge: ActedInSort
               node: ActorSort
@@ -1002,17 +951,6 @@ describe("String Comparators", () => {
               cursor: String!
               node: Actor!
               properties: ActedIn!
-            }
-
-            input MovieActorsRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Movies where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Movies where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Movies where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input MovieActorsUpdateConnectionInput {
@@ -1077,9 +1015,7 @@ describe("String Comparators", () => {
               AND: [MovieWhere!]
               NOT: MovieWhere
               OR: [MovieWhere!]
-              actors: MovieActorsRelationshipFilters
               actorsAggregate: MovieActorsAggregateInput
-              actorsConnection: MovieActorsConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related MovieActorsConnections match this filter
               \\"\\"\\"

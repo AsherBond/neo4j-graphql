@@ -150,25 +150,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input ActorActedInConnectionFilters {
-              \\"\\"\\"
-              Return Actors where all of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              all: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where none of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              none: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where one of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              single: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where some of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              some: ActorActedInConnectionWhere
-            }
-
             input ActorActedInConnectionSort {
               edge: ActedInSort
               node: ProductionSort
@@ -225,17 +206,6 @@ describe("Interface Relationships", () => {
               cursor: String!
               node: Production!
               properties: ActedIn!
-            }
-
-            input ActorActedInRelationshipFilters {
-              \\"\\"\\"Return Actors where all of the related Productions match this filter\\"\\"\\"
-              all: ProductionWhere
-              \\"\\"\\"Return Actors where none of the related Productions match this filter\\"\\"\\"
-              none: ProductionWhere
-              \\"\\"\\"Return Actors where one of the related Productions match this filter\\"\\"\\"
-              single: ProductionWhere
-              \\"\\"\\"Return Actors where some of the related Productions match this filter\\"\\"\\"
-              some: ProductionWhere
             }
 
             input ActorActedInUpdateConnectionInput {
@@ -302,9 +272,7 @@ describe("Interface Relationships", () => {
               AND: [ActorWhere!]
               NOT: ActorWhere
               OR: [ActorWhere!]
-              actedIn: ActorActedInRelationshipFilters
               actedInAggregate: ActorActedInAggregateInput
-              actedInConnection: ActorActedInConnectionFilters
               \\"\\"\\"
               Return Actors where all of the related ActorActedInConnections match this filter
               \\"\\"\\"
@@ -816,25 +784,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input ActorActedInConnectionFilters {
-              \\"\\"\\"
-              Return Actors where all of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              all: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where none of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              none: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where one of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              single: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where some of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              some: ActorActedInConnectionWhere
-            }
-
             input ActorActedInConnectionSort {
               edge: ActedInSort
               node: ProductionSort
@@ -893,17 +842,6 @@ describe("Interface Relationships", () => {
               cursor: String!
               node: Production!
               properties: ActedIn!
-            }
-
-            input ActorActedInRelationshipFilters {
-              \\"\\"\\"Return Actors where all of the related Productions match this filter\\"\\"\\"
-              all: ProductionWhere
-              \\"\\"\\"Return Actors where none of the related Productions match this filter\\"\\"\\"
-              none: ProductionWhere
-              \\"\\"\\"Return Actors where one of the related Productions match this filter\\"\\"\\"
-              single: ProductionWhere
-              \\"\\"\\"Return Actors where some of the related Productions match this filter\\"\\"\\"
-              some: ProductionWhere
             }
 
             input ActorActedInUpdateConnectionInput {
@@ -982,9 +920,7 @@ describe("Interface Relationships", () => {
               AND: [ActorWhere!]
               NOT: ActorWhere
               OR: [ActorWhere!]
-              actedIn: ActorActedInRelationshipFilters
               actedInAggregate: ActorActedInAggregateInput
-              actedInConnection: ActorActedInConnectionFilters
               \\"\\"\\"
               Return Actors where all of the related ActorActedInConnections match this filter
               \\"\\"\\"
@@ -1120,25 +1056,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input EpisodeSeriesConnectionFilters {
-              \\"\\"\\"
-              Return Episodes where all of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              all: EpisodeSeriesConnectionWhere
-              \\"\\"\\"
-              Return Episodes where none of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              none: EpisodeSeriesConnectionWhere
-              \\"\\"\\"
-              Return Episodes where one of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              single: EpisodeSeriesConnectionWhere
-              \\"\\"\\"
-              Return Episodes where some of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              some: EpisodeSeriesConnectionWhere
-            }
-
             input EpisodeSeriesConnectionSort {
               node: SeriesSort
             }
@@ -1215,17 +1132,6 @@ describe("Interface Relationships", () => {
               node: Series!
             }
 
-            input EpisodeSeriesRelationshipFilters {
-              \\"\\"\\"Return Episodes where all of the related Series match this filter\\"\\"\\"
-              all: SeriesWhere
-              \\"\\"\\"Return Episodes where none of the related Series match this filter\\"\\"\\"
-              none: SeriesWhere
-              \\"\\"\\"Return Episodes where one of the related Series match this filter\\"\\"\\"
-              single: SeriesWhere
-              \\"\\"\\"Return Episodes where some of the related Series match this filter\\"\\"\\"
-              some: SeriesWhere
-            }
-
             type EpisodeSeriesSeriesAggregationSelection {
               count: Int!
               node: EpisodeSeriesSeriesNodeAggregateSelection
@@ -1275,9 +1181,7 @@ describe("Interface Relationships", () => {
               runtime_IN: [Int!]
               runtime_LT: Int
               runtime_LTE: Int
-              series: EpisodeSeriesRelationshipFilters
               seriesAggregate: EpisodeSeriesAggregateInput
-              seriesConnection: EpisodeSeriesConnectionFilters
               \\"\\"\\"
               Return Episodes where all of the related EpisodeSeriesConnections match this filter
               \\"\\"\\"
@@ -1375,25 +1279,6 @@ describe("Interface Relationships", () => {
               where: ActorConnectWhere
             }
 
-            input MovieActorsConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              all: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              none: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              single: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              some: ProductionActorsConnectionWhere
-            }
-
             input MovieActorsCreateFieldInput {
               edge: ActedInCreateInput!
               node: ActorCreateInput!
@@ -1423,17 +1308,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input MovieActorsRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Movies where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Movies where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Movies where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input MovieActorsUpdateConnectionInput {
@@ -1493,9 +1367,7 @@ describe("Interface Relationships", () => {
               AND: [MovieWhere!]
               NOT: MovieWhere
               OR: [MovieWhere!]
-              actors: MovieActorsRelationshipFilters
               actorsAggregate: MovieActorsAggregateInput
-              actorsConnection: MovieActorsConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related ProductionActorsConnections match this filter
               \\"\\"\\"
@@ -1593,25 +1465,6 @@ describe("Interface Relationships", () => {
               edges: [ProductionActorsRelationship!]!
               pageInfo: PageInfo!
               totalCount: Int!
-            }
-
-            input ProductionActorsConnectionFilters {
-              \\"\\"\\"
-              Return Productions where all of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              all: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Productions where none of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              none: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Productions where one of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              single: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Productions where some of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              some: ProductionActorsConnectionWhere
             }
 
             input ProductionActorsConnectionSort {
@@ -1714,17 +1567,6 @@ describe("Interface Relationships", () => {
               properties: ProductionActorsRelationshipProperties!
             }
 
-            input ProductionActorsRelationshipFilters {
-              \\"\\"\\"Return Productions where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Productions where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Productions where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Productions where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
-            }
-
             union ProductionActorsRelationshipProperties = ActedIn
 
             input ProductionActorsUpdateConnectionInput {
@@ -1794,9 +1636,7 @@ describe("Interface Relationships", () => {
               AND: [ProductionWhere!]
               NOT: ProductionWhere
               OR: [ProductionWhere!]
-              actors: ProductionActorsRelationshipFilters
               actorsAggregate: ProductionActorsAggregateInput
-              actorsConnection: ProductionActorsConnectionFilters
               \\"\\"\\"
               Return Productions where all of the related ProductionActorsConnections match this filter
               \\"\\"\\"
@@ -1898,25 +1738,6 @@ describe("Interface Relationships", () => {
               where: ActorConnectWhere
             }
 
-            input SeriesActorsConnectionFilters {
-              \\"\\"\\"
-              Return Series where all of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              all: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where none of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              none: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where one of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              single: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where some of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              some: ProductionActorsConnectionWhere
-            }
-
             input SeriesActorsCreateFieldInput {
               edge: ActedInCreateInput!
               node: ActorCreateInput!
@@ -1946,17 +1767,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input SeriesActorsRelationshipFilters {
-              \\"\\"\\"Return Series where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Series where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Series where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Series where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input SeriesActorsUpdateConnectionInput {
@@ -2048,25 +1858,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input SeriesEpisodesConnectionFilters {
-              \\"\\"\\"
-              Return Series where all of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              all: SeriesEpisodesConnectionWhere
-              \\"\\"\\"
-              Return Series where none of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              none: SeriesEpisodesConnectionWhere
-              \\"\\"\\"
-              Return Series where one of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              single: SeriesEpisodesConnectionWhere
-              \\"\\"\\"
-              Return Series where some of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              some: SeriesEpisodesConnectionWhere
-            }
-
             input SeriesEpisodesConnectionSort {
               node: EpisodeSort
             }
@@ -2128,17 +1919,6 @@ describe("Interface Relationships", () => {
               node: Episode!
             }
 
-            input SeriesEpisodesRelationshipFilters {
-              \\"\\"\\"Return Series where all of the related Episodes match this filter\\"\\"\\"
-              all: EpisodeWhere
-              \\"\\"\\"Return Series where none of the related Episodes match this filter\\"\\"\\"
-              none: EpisodeWhere
-              \\"\\"\\"Return Series where one of the related Episodes match this filter\\"\\"\\"
-              single: EpisodeWhere
-              \\"\\"\\"Return Series where some of the related Episodes match this filter\\"\\"\\"
-              some: EpisodeWhere
-            }
-
             input SeriesEpisodesUpdateConnectionInput {
               node: EpisodeUpdateInput
             }
@@ -2175,9 +1955,7 @@ describe("Interface Relationships", () => {
               AND: [SeriesWhere!]
               NOT: SeriesWhere
               OR: [SeriesWhere!]
-              actors: SeriesActorsRelationshipFilters
               actorsAggregate: SeriesActorsAggregateInput
-              actorsConnection: SeriesActorsConnectionFilters
               \\"\\"\\"
               Return Series where all of the related ProductionActorsConnections match this filter
               \\"\\"\\"
@@ -2209,9 +1987,7 @@ describe("Interface Relationships", () => {
               episodeCount_IN: [Int!]
               episodeCount_LT: Int
               episodeCount_LTE: Int
-              episodes: SeriesEpisodesRelationshipFilters
               episodesAggregate: SeriesEpisodesAggregateInput
-              episodesConnection: SeriesEpisodesConnectionFilters
               \\"\\"\\"
               Return Series where all of the related SeriesEpisodesConnections match this filter
               \\"\\"\\"
@@ -2450,25 +2226,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input ActorActedInConnectionFilters {
-              \\"\\"\\"
-              Return Actors where all of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              all: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where none of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              none: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where one of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              single: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where some of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              some: ActorActedInConnectionWhere
-            }
-
             input ActorActedInConnectionSort {
               edge: ActedInSort
               node: ProductionSort
@@ -2527,17 +2284,6 @@ describe("Interface Relationships", () => {
               cursor: String!
               node: Production!
               properties: ActedIn!
-            }
-
-            input ActorActedInRelationshipFilters {
-              \\"\\"\\"Return Actors where all of the related Productions match this filter\\"\\"\\"
-              all: ProductionWhere
-              \\"\\"\\"Return Actors where none of the related Productions match this filter\\"\\"\\"
-              none: ProductionWhere
-              \\"\\"\\"Return Actors where one of the related Productions match this filter\\"\\"\\"
-              single: ProductionWhere
-              \\"\\"\\"Return Actors where some of the related Productions match this filter\\"\\"\\"
-              some: ProductionWhere
             }
 
             input ActorActedInUpdateConnectionInput {
@@ -2616,9 +2362,7 @@ describe("Interface Relationships", () => {
               AND: [ActorWhere!]
               NOT: ActorWhere
               OR: [ActorWhere!]
-              actedIn: ActorActedInRelationshipFilters
               actedInAggregate: ActorActedInAggregateInput
-              actedInConnection: ActorActedInConnectionFilters
               \\"\\"\\"
               Return Actors where all of the related ActorActedInConnections match this filter
               \\"\\"\\"
@@ -2754,25 +2498,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input EpisodeSeriesConnectionFilters {
-              \\"\\"\\"
-              Return Episodes where all of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              all: EpisodeSeriesConnectionWhere
-              \\"\\"\\"
-              Return Episodes where none of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              none: EpisodeSeriesConnectionWhere
-              \\"\\"\\"
-              Return Episodes where one of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              single: EpisodeSeriesConnectionWhere
-              \\"\\"\\"
-              Return Episodes where some of the related EpisodeSeriesConnections match this filter
-              \\"\\"\\"
-              some: EpisodeSeriesConnectionWhere
-            }
-
             input EpisodeSeriesConnectionSort {
               node: SeriesSort
             }
@@ -2849,17 +2574,6 @@ describe("Interface Relationships", () => {
               node: Series!
             }
 
-            input EpisodeSeriesRelationshipFilters {
-              \\"\\"\\"Return Episodes where all of the related Series match this filter\\"\\"\\"
-              all: SeriesWhere
-              \\"\\"\\"Return Episodes where none of the related Series match this filter\\"\\"\\"
-              none: SeriesWhere
-              \\"\\"\\"Return Episodes where one of the related Series match this filter\\"\\"\\"
-              single: SeriesWhere
-              \\"\\"\\"Return Episodes where some of the related Series match this filter\\"\\"\\"
-              some: SeriesWhere
-            }
-
             type EpisodeSeriesSeriesAggregationSelection {
               count: Int!
               node: EpisodeSeriesSeriesNodeAggregateSelection
@@ -2909,9 +2623,7 @@ describe("Interface Relationships", () => {
               runtime_IN: [Int!]
               runtime_LT: Int
               runtime_LTE: Int
-              series: EpisodeSeriesRelationshipFilters
               seriesAggregate: EpisodeSeriesAggregateInput
-              seriesConnection: EpisodeSeriesConnectionFilters
               \\"\\"\\"
               Return Episodes where all of the related EpisodeSeriesConnections match this filter
               \\"\\"\\"
@@ -3009,25 +2721,6 @@ describe("Interface Relationships", () => {
               where: ActorConnectWhere
             }
 
-            input MovieActorsConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              all: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              none: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              single: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              some: ProductionActorsConnectionWhere
-            }
-
             input MovieActorsCreateFieldInput {
               edge: ActedInCreateInput!
               node: ActorCreateInput!
@@ -3057,17 +2750,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input MovieActorsRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Movies where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Movies where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Movies where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input MovieActorsUpdateConnectionInput {
@@ -3127,9 +2809,7 @@ describe("Interface Relationships", () => {
               AND: [MovieWhere!]
               NOT: MovieWhere
               OR: [MovieWhere!]
-              actors: MovieActorsRelationshipFilters
               actorsAggregate: MovieActorsAggregateInput
-              actorsConnection: MovieActorsConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related ProductionActorsConnections match this filter
               \\"\\"\\"
@@ -3227,25 +2907,6 @@ describe("Interface Relationships", () => {
               edges: [ProductionActorsRelationship!]!
               pageInfo: PageInfo!
               totalCount: Int!
-            }
-
-            input ProductionActorsConnectionFilters {
-              \\"\\"\\"
-              Return Productions where all of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              all: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Productions where none of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              none: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Productions where one of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              single: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Productions where some of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              some: ProductionActorsConnectionWhere
             }
 
             input ProductionActorsConnectionSort {
@@ -3368,17 +3029,6 @@ describe("Interface Relationships", () => {
               properties: ProductionActorsRelationshipProperties!
             }
 
-            input ProductionActorsRelationshipFilters {
-              \\"\\"\\"Return Productions where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Productions where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Productions where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Productions where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
-            }
-
             union ProductionActorsRelationshipProperties = ActedIn | StarredIn
 
             input ProductionActorsUpdateConnectionInput {
@@ -3448,9 +3098,7 @@ describe("Interface Relationships", () => {
               AND: [ProductionWhere!]
               NOT: ProductionWhere
               OR: [ProductionWhere!]
-              actors: ProductionActorsRelationshipFilters
               actorsAggregate: ProductionActorsAggregateInput
-              actorsConnection: ProductionActorsConnectionFilters
               \\"\\"\\"
               Return Productions where all of the related ProductionActorsConnections match this filter
               \\"\\"\\"
@@ -3552,25 +3200,6 @@ describe("Interface Relationships", () => {
               where: ActorConnectWhere
             }
 
-            input SeriesActorsConnectionFilters {
-              \\"\\"\\"
-              Return Series where all of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              all: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where none of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              none: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where one of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              single: ProductionActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where some of the related ProductionActorsConnections match this filter
-              \\"\\"\\"
-              some: ProductionActorsConnectionWhere
-            }
-
             input SeriesActorsCreateFieldInput {
               edge: StarredInCreateInput!
               node: ActorCreateInput!
@@ -3600,17 +3229,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input SeriesActorsRelationshipFilters {
-              \\"\\"\\"Return Series where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Series where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Series where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Series where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input SeriesActorsUpdateConnectionInput {
@@ -3702,25 +3320,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input SeriesEpisodesConnectionFilters {
-              \\"\\"\\"
-              Return Series where all of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              all: SeriesEpisodesConnectionWhere
-              \\"\\"\\"
-              Return Series where none of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              none: SeriesEpisodesConnectionWhere
-              \\"\\"\\"
-              Return Series where one of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              single: SeriesEpisodesConnectionWhere
-              \\"\\"\\"
-              Return Series where some of the related SeriesEpisodesConnections match this filter
-              \\"\\"\\"
-              some: SeriesEpisodesConnectionWhere
-            }
-
             input SeriesEpisodesConnectionSort {
               node: EpisodeSort
             }
@@ -3782,17 +3381,6 @@ describe("Interface Relationships", () => {
               node: Episode!
             }
 
-            input SeriesEpisodesRelationshipFilters {
-              \\"\\"\\"Return Series where all of the related Episodes match this filter\\"\\"\\"
-              all: EpisodeWhere
-              \\"\\"\\"Return Series where none of the related Episodes match this filter\\"\\"\\"
-              none: EpisodeWhere
-              \\"\\"\\"Return Series where one of the related Episodes match this filter\\"\\"\\"
-              single: EpisodeWhere
-              \\"\\"\\"Return Series where some of the related Episodes match this filter\\"\\"\\"
-              some: EpisodeWhere
-            }
-
             input SeriesEpisodesUpdateConnectionInput {
               node: EpisodeUpdateInput
             }
@@ -3829,9 +3417,7 @@ describe("Interface Relationships", () => {
               AND: [SeriesWhere!]
               NOT: SeriesWhere
               OR: [SeriesWhere!]
-              actors: SeriesActorsRelationshipFilters
               actorsAggregate: SeriesActorsAggregateInput
-              actorsConnection: SeriesActorsConnectionFilters
               \\"\\"\\"
               Return Series where all of the related ProductionActorsConnections match this filter
               \\"\\"\\"
@@ -3863,9 +3449,7 @@ describe("Interface Relationships", () => {
               episodeCount_IN: [Int!]
               episodeCount_LT: Int
               episodeCount_LTE: Int
-              episodes: SeriesEpisodesRelationshipFilters
               episodesAggregate: SeriesEpisodesAggregateInput
-              episodesConnection: SeriesEpisodesConnectionFilters
               \\"\\"\\"
               Return Series where all of the related SeriesEpisodesConnections match this filter
               \\"\\"\\"
@@ -4173,25 +3757,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Interface1Interface2ConnectionSort {
               node: Interface2Sort
             }
@@ -4241,25 +3806,6 @@ describe("Interface Relationships", () => {
               node: Interface2!
             }
 
-            input Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Interface1Interface2UpdateConnectionInput {
               node: Interface2UpdateInput
             }
@@ -4296,9 +3842,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Interface1Interface2RelationshipFilters
               interface2Aggregate: Interface1Interface2AggregateInput
-              interface2Connection: Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -4542,25 +4086,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input Type1Interface1ConnectionFilters {
-              \\"\\"\\"
-              Return Type1s where all of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              all: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where none of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              none: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where one of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              single: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where some of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              some: Type1Interface1ConnectionWhere
-            }
-
             input Type1Interface1ConnectionSort {
               node: Interface1Sort
             }
@@ -4630,25 +4155,6 @@ describe("Interface Relationships", () => {
               where: Interface2ConnectWhere
             }
 
-            input Type1Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Type1Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Type1Interface1Interface2CreateFieldInput {
               node: Interface2CreateInput!
             }
@@ -4696,25 +4202,6 @@ describe("Interface Relationships", () => {
               field2_SHORTEST_LENGTH_LTE: Int
             }
 
-            input Type1Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Type1Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Type1Interface1Interface2UpdateConnectionInput {
               node: Interface2UpdateInput
             }
@@ -4754,17 +4241,6 @@ describe("Interface Relationships", () => {
               node: Interface1!
             }
 
-            input Type1Interface1RelationshipFilters {
-              \\"\\"\\"Return Type1s where all of the related Interface1s match this filter\\"\\"\\"
-              all: Interface1Where
-              \\"\\"\\"Return Type1s where none of the related Interface1s match this filter\\"\\"\\"
-              none: Interface1Where
-              \\"\\"\\"Return Type1s where one of the related Interface1s match this filter\\"\\"\\"
-              single: Interface1Where
-              \\"\\"\\"Return Type1s where some of the related Interface1s match this filter\\"\\"\\"
-              some: Interface1Where
-            }
-
             \\"\\"\\"
             Fields to sort Type1Interface1s by. The order in which sorts are applied is not guaranteed when specifying many fields in one Type1Interface1Sort object.
             \\"\\"\\"
@@ -4801,9 +4277,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Type1Interface1Interface2RelationshipFilters
               interface2Aggregate: Type1Interface1Interface2AggregateInput
-              interface2Connection: Type1Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Type1Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -4915,9 +4389,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface1: Type1Interface1RelationshipFilters
               interface1Aggregate: Type1Interface1AggregateInput
-              interface1Connection: Type1Interface1ConnectionFilters
               \\"\\"\\"
               Return Type1s where all of the related Type1Interface1Connections match this filter
               \\"\\"\\"
@@ -4992,25 +4464,6 @@ describe("Interface Relationships", () => {
               where: Interface2ConnectWhere
             }
 
-            input Type2Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Type2Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Type2Interface1Interface2CreateFieldInput {
               node: Interface2CreateInput!
             }
@@ -5058,25 +4511,6 @@ describe("Interface Relationships", () => {
               field2_SHORTEST_LENGTH_LTE: Int
             }
 
-            input Type2Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Type2Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Type2Interface1Interface2UpdateConnectionInput {
               node: Interface2UpdateInput
             }
@@ -5113,9 +4547,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Type2Interface1Interface2RelationshipFilters
               interface2Aggregate: Type2Interface1Interface2AggregateInput
-              interface2Connection: Type2Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Type2Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -5425,25 +4857,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Interface1Interface2ConnectionSort {
               edge: Interface1Interface2EdgeSort
               node: Interface2Sort
@@ -5542,25 +4955,6 @@ describe("Interface Relationships", () => {
               properties: Interface1Interface2RelationshipProperties!
             }
 
-            input Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             union Interface1Interface2RelationshipProperties = Props
 
             input Interface1Interface2UpdateConnectionInput {
@@ -5600,9 +4994,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Interface1Interface2RelationshipFilters
               interface2Aggregate: Interface1Interface2AggregateInput
-              interface2Connection: Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -5909,25 +5301,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input Type1Interface1ConnectionFilters {
-              \\"\\"\\"
-              Return Type1s where all of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              all: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where none of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              none: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where one of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              single: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where some of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              some: Type1Interface1ConnectionWhere
-            }
-
             input Type1Interface1ConnectionSort {
               node: Interface1Sort
             }
@@ -5999,25 +5372,6 @@ describe("Interface Relationships", () => {
               where: Interface2ConnectWhere
             }
 
-            input Type1Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Type1Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Type1Interface1Interface2CreateFieldInput {
               edge: PropsCreateInput!
               node: Interface2CreateInput!
@@ -6071,25 +5425,6 @@ describe("Interface Relationships", () => {
               field2_SHORTEST_LENGTH_LTE: Int
             }
 
-            input Type1Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Type1Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Type1Interface1Interface2UpdateConnectionInput {
               edge: PropsUpdateInput
               node: Interface2UpdateInput
@@ -6130,17 +5465,6 @@ describe("Interface Relationships", () => {
               node: Interface1!
             }
 
-            input Type1Interface1RelationshipFilters {
-              \\"\\"\\"Return Type1s where all of the related Interface1s match this filter\\"\\"\\"
-              all: Interface1Where
-              \\"\\"\\"Return Type1s where none of the related Interface1s match this filter\\"\\"\\"
-              none: Interface1Where
-              \\"\\"\\"Return Type1s where one of the related Interface1s match this filter\\"\\"\\"
-              single: Interface1Where
-              \\"\\"\\"Return Type1s where some of the related Interface1s match this filter\\"\\"\\"
-              some: Interface1Where
-            }
-
             \\"\\"\\"
             Fields to sort Type1Interface1s by. The order in which sorts are applied is not guaranteed when specifying many fields in one Type1Interface1Sort object.
             \\"\\"\\"
@@ -6177,9 +5501,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Type1Interface1Interface2RelationshipFilters
               interface2Aggregate: Type1Interface1Interface2AggregateInput
-              interface2Connection: Type1Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Type1Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -6291,9 +5613,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface1: Type1Interface1RelationshipFilters
               interface1Aggregate: Type1Interface1AggregateInput
-              interface1Connection: Type1Interface1ConnectionFilters
               \\"\\"\\"
               Return Type1s where all of the related Type1Interface1Connections match this filter
               \\"\\"\\"
@@ -6370,25 +5690,6 @@ describe("Interface Relationships", () => {
               where: Interface2ConnectWhere
             }
 
-            input Type2Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Type2Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Type2Interface1Interface2CreateFieldInput {
               edge: PropsCreateInput!
               node: Interface2CreateInput!
@@ -6442,25 +5743,6 @@ describe("Interface Relationships", () => {
               field2_SHORTEST_LENGTH_LTE: Int
             }
 
-            input Type2Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Type2Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Type2Interface1Interface2UpdateConnectionInput {
               edge: PropsUpdateInput
               node: Interface2UpdateInput
@@ -6498,9 +5780,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Type2Interface1Interface2RelationshipFilters
               interface2Aggregate: Type2Interface1Interface2AggregateInput
-              interface2Connection: Type2Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Type2Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -6816,25 +6096,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Interface1Interface2ConnectionSort {
               edge: Interface1Interface2EdgeSort
               node: Interface2Sort
@@ -6953,25 +6214,6 @@ describe("Interface Relationships", () => {
               properties: Interface1Interface2RelationshipProperties!
             }
 
-            input Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             union Interface1Interface2RelationshipProperties = Type1Props | Type2Props
 
             input Interface1Interface2UpdateConnectionInput {
@@ -7011,9 +6253,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Interface1Interface2RelationshipFilters
               interface2Aggregate: Interface1Interface2AggregateInput
-              interface2Connection: Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -7257,25 +6497,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input Type1Interface1ConnectionFilters {
-              \\"\\"\\"
-              Return Type1s where all of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              all: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where none of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              none: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where one of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              single: Type1Interface1ConnectionWhere
-              \\"\\"\\"
-              Return Type1s where some of the related Type1Interface1Connections match this filter
-              \\"\\"\\"
-              some: Type1Interface1ConnectionWhere
-            }
-
             input Type1Interface1ConnectionSort {
               node: Interface1Sort
             }
@@ -7347,25 +6568,6 @@ describe("Interface Relationships", () => {
               where: Interface2ConnectWhere
             }
 
-            input Type1Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Type1Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type1Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Type1Interface1Interface2CreateFieldInput {
               edge: Type1PropsCreateInput!
               node: Interface2CreateInput!
@@ -7419,25 +6621,6 @@ describe("Interface Relationships", () => {
               field2_SHORTEST_LENGTH_LTE: Int
             }
 
-            input Type1Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Type1Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Type1Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Type1Interface1Interface2UpdateConnectionInput {
               edge: Type1PropsUpdateInput
               node: Interface2UpdateInput
@@ -7478,17 +6661,6 @@ describe("Interface Relationships", () => {
               node: Interface1!
             }
 
-            input Type1Interface1RelationshipFilters {
-              \\"\\"\\"Return Type1s where all of the related Interface1s match this filter\\"\\"\\"
-              all: Interface1Where
-              \\"\\"\\"Return Type1s where none of the related Interface1s match this filter\\"\\"\\"
-              none: Interface1Where
-              \\"\\"\\"Return Type1s where one of the related Interface1s match this filter\\"\\"\\"
-              single: Interface1Where
-              \\"\\"\\"Return Type1s where some of the related Interface1s match this filter\\"\\"\\"
-              some: Interface1Where
-            }
-
             \\"\\"\\"
             Fields to sort Type1Interface1s by. The order in which sorts are applied is not guaranteed when specifying many fields in one Type1Interface1Sort object.
             \\"\\"\\"
@@ -7525,9 +6697,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Type1Interface1Interface2RelationshipFilters
               interface2Aggregate: Type1Interface1Interface2AggregateInput
-              interface2Connection: Type1Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Type1Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -7701,9 +6871,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface1: Type1Interface1RelationshipFilters
               interface1Aggregate: Type1Interface1AggregateInput
-              interface1Connection: Type1Interface1ConnectionFilters
               \\"\\"\\"
               Return Type1s where all of the related Type1Interface1Connections match this filter
               \\"\\"\\"
@@ -7780,25 +6948,6 @@ describe("Interface Relationships", () => {
               where: Interface2ConnectWhere
             }
 
-            input Type2Interface1Interface2ConnectionFilters {
-              \\"\\"\\"
-              Return Type2Interface1s where all of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              all: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where none of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              none: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where one of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              single: Interface1Interface2ConnectionWhere
-              \\"\\"\\"
-              Return Type2Interface1s where some of the related Interface1Interface2Connections match this filter
-              \\"\\"\\"
-              some: Interface1Interface2ConnectionWhere
-            }
-
             input Type2Interface1Interface2CreateFieldInput {
               edge: Type2PropsCreateInput!
               node: Interface2CreateInput!
@@ -7852,25 +7001,6 @@ describe("Interface Relationships", () => {
               field2_SHORTEST_LENGTH_LTE: Int
             }
 
-            input Type2Interface1Interface2RelationshipFilters {
-              \\"\\"\\"
-              Return Type2Interface1s where all of the related Interface2s match this filter
-              \\"\\"\\"
-              all: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where none of the related Interface2s match this filter
-              \\"\\"\\"
-              none: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where one of the related Interface2s match this filter
-              \\"\\"\\"
-              single: Interface2Where
-              \\"\\"\\"
-              Return Type2Interface1s where some of the related Interface2s match this filter
-              \\"\\"\\"
-              some: Interface2Where
-            }
-
             input Type2Interface1Interface2UpdateConnectionInput {
               edge: Type2PropsUpdateInput
               node: Interface2UpdateInput
@@ -7908,9 +7038,7 @@ describe("Interface Relationships", () => {
               field1_EQ: String
               field1_IN: [String!]
               field1_STARTS_WITH: String
-              interface2: Type2Interface1Interface2RelationshipFilters
               interface2Aggregate: Type2Interface1Interface2AggregateInput
-              interface2Connection: Type2Interface1Interface2ConnectionFilters
               \\"\\"\\"
               Return Type2Interface1s where all of the related Interface1Interface2Connections match this filter
               \\"\\"\\"
@@ -8191,25 +7319,6 @@ describe("Interface Relationships", () => {
               where: UserConnectWhere
             }
 
-            input CommentCreatorConnectionFilters {
-              \\"\\"\\"
-              Return Comments where all of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              all: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Comments where none of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              none: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Comments where one of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              single: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Comments where some of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              some: ContentCreatorConnectionWhere
-            }
-
             input CommentCreatorCreateFieldInput {
               node: UserCreateInput!
             }
@@ -8248,17 +7357,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input CommentCreatorRelationshipFilters {
-              \\"\\"\\"Return Comments where all of the related Users match this filter\\"\\"\\"
-              all: UserWhere
-              \\"\\"\\"Return Comments where none of the related Users match this filter\\"\\"\\"
-              none: UserWhere
-              \\"\\"\\"Return Comments where one of the related Users match this filter\\"\\"\\"
-              single: UserWhere
-              \\"\\"\\"Return Comments where some of the related Users match this filter\\"\\"\\"
-              some: UserWhere
             }
 
             input CommentCreatorUpdateConnectionInput {
@@ -8310,25 +7408,6 @@ describe("Interface Relationships", () => {
               edges: [CommentPostRelationship!]!
               pageInfo: PageInfo!
               totalCount: Int!
-            }
-
-            input CommentPostConnectionFilters {
-              \\"\\"\\"
-              Return Comments where all of the related CommentPostConnections match this filter
-              \\"\\"\\"
-              all: CommentPostConnectionWhere
-              \\"\\"\\"
-              Return Comments where none of the related CommentPostConnections match this filter
-              \\"\\"\\"
-              none: CommentPostConnectionWhere
-              \\"\\"\\"
-              Return Comments where one of the related CommentPostConnections match this filter
-              \\"\\"\\"
-              single: CommentPostConnectionWhere
-              \\"\\"\\"
-              Return Comments where some of the related CommentPostConnections match this filter
-              \\"\\"\\"
-              some: CommentPostConnectionWhere
             }
 
             input CommentPostConnectionSort {
@@ -8407,17 +7486,6 @@ describe("Interface Relationships", () => {
               node: Post!
             }
 
-            input CommentPostRelationshipFilters {
-              \\"\\"\\"Return Comments where all of the related Posts match this filter\\"\\"\\"
-              all: PostWhere
-              \\"\\"\\"Return Comments where none of the related Posts match this filter\\"\\"\\"
-              none: PostWhere
-              \\"\\"\\"Return Comments where one of the related Posts match this filter\\"\\"\\"
-              single: PostWhere
-              \\"\\"\\"Return Comments where some of the related Posts match this filter\\"\\"\\"
-              some: PostWhere
-            }
-
             input CommentPostUpdateConnectionInput {
               node: PostUpdateInput
             }
@@ -8468,9 +7536,7 @@ describe("Interface Relationships", () => {
               content_EQ: String
               content_IN: [String]
               content_STARTS_WITH: String
-              creator: CommentCreatorRelationshipFilters
               creatorAggregate: CommentCreatorAggregateInput
-              creatorConnection: CommentCreatorConnectionFilters
               \\"\\"\\"
               Return Comments where all of the related ContentCreatorConnections match this filter
               \\"\\"\\"
@@ -8501,9 +7567,7 @@ describe("Interface Relationships", () => {
               id_EQ: ID
               id_IN: [ID]
               id_STARTS_WITH: ID
-              post: CommentPostRelationshipFilters
               postAggregate: CommentPostAggregateInput
-              postConnection: CommentPostConnectionFilters
               \\"\\"\\"
               Return Comments where all of the related CommentPostConnections match this filter
               \\"\\"\\"
@@ -8585,25 +7649,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input ContentCreatorConnectionFilters {
-              \\"\\"\\"
-              Return Contents where all of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              all: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Contents where none of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              none: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Contents where one of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              single: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Contents where some of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              some: ContentCreatorConnectionWhere
-            }
-
             input ContentCreatorConnectionSort {
               node: UserSort
             }
@@ -8665,17 +7710,6 @@ describe("Interface Relationships", () => {
               node: User!
             }
 
-            input ContentCreatorRelationshipFilters {
-              \\"\\"\\"Return Contents where all of the related Users match this filter\\"\\"\\"
-              all: UserWhere
-              \\"\\"\\"Return Contents where none of the related Users match this filter\\"\\"\\"
-              none: UserWhere
-              \\"\\"\\"Return Contents where one of the related Users match this filter\\"\\"\\"
-              single: UserWhere
-              \\"\\"\\"Return Contents where some of the related Users match this filter\\"\\"\\"
-              some: UserWhere
-            }
-
             input ContentCreatorUpdateConnectionInput {
               node: UserUpdateInput
             }
@@ -8733,9 +7767,7 @@ describe("Interface Relationships", () => {
               content_EQ: String
               content_IN: [String]
               content_STARTS_WITH: String
-              creator: ContentCreatorRelationshipFilters
               creatorAggregate: ContentCreatorAggregateInput
-              creatorConnection: ContentCreatorConnectionFilters
               \\"\\"\\"
               Return Contents where all of the related ContentCreatorConnections match this filter
               \\"\\"\\"
@@ -8900,25 +7932,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input PostCommentsConnectionFilters {
-              \\"\\"\\"
-              Return Posts where all of the related PostCommentsConnections match this filter
-              \\"\\"\\"
-              all: PostCommentsConnectionWhere
-              \\"\\"\\"
-              Return Posts where none of the related PostCommentsConnections match this filter
-              \\"\\"\\"
-              none: PostCommentsConnectionWhere
-              \\"\\"\\"
-              Return Posts where one of the related PostCommentsConnections match this filter
-              \\"\\"\\"
-              single: PostCommentsConnectionWhere
-              \\"\\"\\"
-              Return Posts where some of the related PostCommentsConnections match this filter
-              \\"\\"\\"
-              some: PostCommentsConnectionWhere
-            }
-
             input PostCommentsConnectionSort {
               node: CommentSort
             }
@@ -8985,17 +7998,6 @@ describe("Interface Relationships", () => {
               node: Comment!
             }
 
-            input PostCommentsRelationshipFilters {
-              \\"\\"\\"Return Posts where all of the related Comments match this filter\\"\\"\\"
-              all: CommentWhere
-              \\"\\"\\"Return Posts where none of the related Comments match this filter\\"\\"\\"
-              none: CommentWhere
-              \\"\\"\\"Return Posts where one of the related Comments match this filter\\"\\"\\"
-              single: CommentWhere
-              \\"\\"\\"Return Posts where some of the related Comments match this filter\\"\\"\\"
-              some: CommentWhere
-            }
-
             input PostCommentsUpdateConnectionInput {
               node: CommentUpdateInput
             }
@@ -9042,25 +8044,6 @@ describe("Interface Relationships", () => {
               where: UserConnectWhere
             }
 
-            input PostCreatorConnectionFilters {
-              \\"\\"\\"
-              Return Posts where all of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              all: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Posts where none of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              none: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Posts where one of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              single: ContentCreatorConnectionWhere
-              \\"\\"\\"
-              Return Posts where some of the related ContentCreatorConnections match this filter
-              \\"\\"\\"
-              some: ContentCreatorConnectionWhere
-            }
-
             input PostCreatorCreateFieldInput {
               node: UserCreateInput!
             }
@@ -9099,17 +8082,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input PostCreatorRelationshipFilters {
-              \\"\\"\\"Return Posts where all of the related Users match this filter\\"\\"\\"
-              all: UserWhere
-              \\"\\"\\"Return Posts where none of the related Users match this filter\\"\\"\\"
-              none: UserWhere
-              \\"\\"\\"Return Posts where one of the related Users match this filter\\"\\"\\"
-              single: UserWhere
-              \\"\\"\\"Return Posts where some of the related Users match this filter\\"\\"\\"
-              some: UserWhere
             }
 
             input PostCreatorUpdateConnectionInput {
@@ -9171,9 +8143,7 @@ describe("Interface Relationships", () => {
               AND: [PostWhere!]
               NOT: PostWhere
               OR: [PostWhere!]
-              comments: PostCommentsRelationshipFilters
               commentsAggregate: PostCommentsAggregateInput
-              commentsConnection: PostCommentsConnectionFilters
               \\"\\"\\"
               Return Posts where all of the related PostCommentsConnections match this filter
               \\"\\"\\"
@@ -9204,9 +8174,7 @@ describe("Interface Relationships", () => {
               content_EQ: String
               content_IN: [String]
               content_STARTS_WITH: String
-              creator: PostCreatorRelationshipFilters
               creatorAggregate: PostCreatorAggregateInput
-              creatorConnection: PostCreatorConnectionFilters
               \\"\\"\\"
               Return Posts where all of the related ContentCreatorConnections match this filter
               \\"\\"\\"
@@ -9362,25 +8330,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input UserContentConnectionFilters {
-              \\"\\"\\"
-              Return Users where all of the related UserContentConnections match this filter
-              \\"\\"\\"
-              all: UserContentConnectionWhere
-              \\"\\"\\"
-              Return Users where none of the related UserContentConnections match this filter
-              \\"\\"\\"
-              none: UserContentConnectionWhere
-              \\"\\"\\"
-              Return Users where one of the related UserContentConnections match this filter
-              \\"\\"\\"
-              single: UserContentConnectionWhere
-              \\"\\"\\"
-              Return Users where some of the related UserContentConnections match this filter
-              \\"\\"\\"
-              some: UserContentConnectionWhere
-            }
-
             input UserContentConnectionSort {
               node: ContentSort
             }
@@ -9457,17 +8406,6 @@ describe("Interface Relationships", () => {
               node: Content!
             }
 
-            input UserContentRelationshipFilters {
-              \\"\\"\\"Return Users where all of the related Contents match this filter\\"\\"\\"
-              all: ContentWhere
-              \\"\\"\\"Return Users where none of the related Contents match this filter\\"\\"\\"
-              none: ContentWhere
-              \\"\\"\\"Return Users where one of the related Contents match this filter\\"\\"\\"
-              single: ContentWhere
-              \\"\\"\\"Return Users where some of the related Contents match this filter\\"\\"\\"
-              some: ContentWhere
-            }
-
             input UserContentUpdateConnectionInput {
               node: ContentUpdateInput
             }
@@ -9520,9 +8458,7 @@ describe("Interface Relationships", () => {
               AND: [UserWhere!]
               NOT: UserWhere
               OR: [UserWhere!]
-              content: UserContentRelationshipFilters
               contentAggregate: UserContentAggregateInput
-              contentConnection: UserContentConnectionFilters
               \\"\\"\\"
               Return Users where all of the related UserContentConnections match this filter
               \\"\\"\\"
@@ -9711,25 +8647,6 @@ describe("Interface Relationships", () => {
               totalCount: Int!
             }
 
-            input ActorActedInConnectionFilters {
-              \\"\\"\\"
-              Return Actors where all of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              all: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where none of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              none: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where one of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              single: ActorActedInConnectionWhere
-              \\"\\"\\"
-              Return Actors where some of the related ActorActedInConnections match this filter
-              \\"\\"\\"
-              some: ActorActedInConnectionWhere
-            }
-
             input ActorActedInConnectionSort {
               edge: ActedInSort
               node: ShowSort
@@ -9788,17 +8705,6 @@ describe("Interface Relationships", () => {
               cursor: String!
               node: Show!
               properties: ActedIn!
-            }
-
-            input ActorActedInRelationshipFilters {
-              \\"\\"\\"Return Actors where all of the related Shows match this filter\\"\\"\\"
-              all: ShowWhere
-              \\"\\"\\"Return Actors where none of the related Shows match this filter\\"\\"\\"
-              none: ShowWhere
-              \\"\\"\\"Return Actors where one of the related Shows match this filter\\"\\"\\"
-              single: ShowWhere
-              \\"\\"\\"Return Actors where some of the related Shows match this filter\\"\\"\\"
-              some: ShowWhere
             }
 
             input ActorActedInUpdateConnectionInput {
@@ -9877,9 +8783,7 @@ describe("Interface Relationships", () => {
               AND: [ActorWhere!]
               NOT: ActorWhere
               OR: [ActorWhere!]
-              actedIn: ActorActedInRelationshipFilters
               actedInAggregate: ActorActedInAggregateInput
-              actedInConnection: ActorActedInConnectionFilters
               \\"\\"\\"
               Return Actors where all of the related ActorActedInConnections match this filter
               \\"\\"\\"
@@ -10014,25 +8918,6 @@ describe("Interface Relationships", () => {
               where: ActorConnectWhere
             }
 
-            input MovieActorsConnectionFilters {
-              \\"\\"\\"
-              Return Movies where all of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              all: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where none of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              none: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where one of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              single: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Movies where some of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              some: ShowActorsConnectionWhere
-            }
-
             input MovieActorsCreateFieldInput {
               edge: ActedInCreateInput!
               node: ActorCreateInput!
@@ -10062,17 +8947,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input MovieActorsRelationshipFilters {
-              \\"\\"\\"Return Movies where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Movies where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Movies where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Movies where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input MovieActorsUpdateConnectionInput {
@@ -10132,9 +9006,7 @@ describe("Interface Relationships", () => {
               AND: [MovieWhere!]
               NOT: MovieWhere
               OR: [MovieWhere!]
-              actors: MovieActorsRelationshipFilters
               actorsAggregate: MovieActorsAggregateInput
-              actorsConnection: MovieActorsConnectionFilters
               \\"\\"\\"
               Return Movies where all of the related ShowActorsConnections match this filter
               \\"\\"\\"
@@ -10305,25 +9177,6 @@ describe("Interface Relationships", () => {
               where: ActorConnectWhere
             }
 
-            input SeriesActorsConnectionFilters {
-              \\"\\"\\"
-              Return Series where all of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              all: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where none of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              none: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where one of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              single: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Series where some of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              some: ShowActorsConnectionWhere
-            }
-
             input SeriesActorsCreateFieldInput {
               edge: StarredInCreateInput!
               node: ActorCreateInput!
@@ -10353,17 +9206,6 @@ describe("Interface Relationships", () => {
               name_SHORTEST_LENGTH_GTE: Int
               name_SHORTEST_LENGTH_LT: Int
               name_SHORTEST_LENGTH_LTE: Int
-            }
-
-            input SeriesActorsRelationshipFilters {
-              \\"\\"\\"Return Series where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Series where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Series where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Series where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
             }
 
             input SeriesActorsUpdateConnectionInput {
@@ -10429,9 +9271,7 @@ describe("Interface Relationships", () => {
               AND: [SeriesWhere!]
               NOT: SeriesWhere
               OR: [SeriesWhere!]
-              actors: SeriesActorsRelationshipFilters
               actorsAggregate: SeriesActorsAggregateInput
-              actorsConnection: SeriesActorsConnectionFilters
               \\"\\"\\"
               Return Series where all of the related ShowActorsConnections match this filter
               \\"\\"\\"
@@ -10500,25 +9340,6 @@ describe("Interface Relationships", () => {
               edges: [ShowActorsRelationship!]!
               pageInfo: PageInfo!
               totalCount: Int!
-            }
-
-            input ShowActorsConnectionFilters {
-              \\"\\"\\"
-              Return Shows where all of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              all: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Shows where none of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              none: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Shows where one of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              single: ShowActorsConnectionWhere
-              \\"\\"\\"
-              Return Shows where some of the related ShowActorsConnections match this filter
-              \\"\\"\\"
-              some: ShowActorsConnectionWhere
             }
 
             input ShowActorsConnectionSort {
@@ -10641,17 +9462,6 @@ describe("Interface Relationships", () => {
               properties: ShowActorsRelationshipProperties!
             }
 
-            input ShowActorsRelationshipFilters {
-              \\"\\"\\"Return Shows where all of the related Actors match this filter\\"\\"\\"
-              all: ActorWhere
-              \\"\\"\\"Return Shows where none of the related Actors match this filter\\"\\"\\"
-              none: ActorWhere
-              \\"\\"\\"Return Shows where one of the related Actors match this filter\\"\\"\\"
-              single: ActorWhere
-              \\"\\"\\"Return Shows where some of the related Actors match this filter\\"\\"\\"
-              some: ActorWhere
-            }
-
             union ShowActorsRelationshipProperties = ActedIn | StarredIn
 
             input ShowActorsUpdateConnectionInput {
@@ -10721,9 +9531,7 @@ describe("Interface Relationships", () => {
               AND: [ShowWhere!]
               NOT: ShowWhere
               OR: [ShowWhere!]
-              actors: ShowActorsRelationshipFilters
               actorsAggregate: ShowActorsAggregateInput
-              actorsConnection: ShowActorsConnectionFilters
               \\"\\"\\"
               Return Shows where all of the related ShowActorsConnections match this filter
               \\"\\"\\"

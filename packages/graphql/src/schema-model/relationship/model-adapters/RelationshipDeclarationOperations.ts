@@ -17,8 +17,8 @@
  * limitations under the License.
  */
 
-import { RelationshipBaseOperations } from "./RelationshipBaseOperations";
 import type { RelationshipDeclarationAdapter } from "./RelationshipDeclarationAdapter";
+import { RelationshipBaseOperations } from "./RelationshipBaseOperations";
 
 export class RelationshipDeclarationOperations extends RelationshipBaseOperations<RelationshipDeclarationAdapter> {
     constructor(relationshipDeclaration: RelationshipDeclarationAdapter) {
@@ -35,13 +35,5 @@ export class RelationshipDeclarationOperations extends RelationshipBaseOperation
 
     public get relationshipPropertiesFieldTypename(): string {
         return `${this.relationshipFieldTypename}Properties`;
-    }
-
-    public get relationshipFiltersTypeName(): string {
-        return `${this.prefixForTypename}RelationshipFilters`;
-    }
-
-    public get connectionFiltersTypeName(): string {
-        return `${this.prefixForTypename}ConnectionFilters`;
     }
 }
