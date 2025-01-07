@@ -73,6 +73,16 @@ describe("issue/duplicate-connect", () => {
                 ) {
                     actors {
                         name
+                        actedInConnection {
+                            edges {
+                                node {
+                                    title
+                                }
+                                properties {
+                                    screenTime
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -108,7 +118,21 @@ describe("issue/duplicate-connect", () => {
             	}
             	RETURN count(*) AS update_this_actedIn0
             }
-            RETURN collect(DISTINCT this { .name }) AS data"
+            WITH *
+            CALL {
+                WITH this
+                MATCH (this)-[update_this0:ACTED_IN]->(update_this1:Movie)
+                WITH collect({ node: update_this1, relationship: update_this0 }) AS edges
+                WITH edges, size(edges) AS totalCount
+                CALL {
+                    WITH edges
+                    UNWIND edges AS edge
+                    WITH edge.node AS update_this1, edge.relationship AS update_this0
+                    RETURN collect({ properties: { screenTime: update_this0.screenTime, __resolveType: \\"ActedIn\\" }, node: { title: update_this1.title, __resolveType: \\"Movie\\" } }) AS update_var2
+                }
+                RETURN { edges: update_var2, totalCount: totalCount } AS update_var3
+            }
+            RETURN collect(DISTINCT this { .name, actedInConnection: update_var3 }) AS data"
         `);
 
         expect(formatParams(result.params)).toMatchInlineSnapshot(`

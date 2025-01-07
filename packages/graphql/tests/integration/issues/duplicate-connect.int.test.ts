@@ -110,6 +110,16 @@ describe("issue/duplicate-connect", () => {
                 }) {
                     ${Actor.plural} {
                         name
+                        actedInConnection {
+                            edges {
+                                node {
+                                    title
+                                }
+                                properties {
+                                    screenTime
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -118,18 +128,62 @@ describe("issue/duplicate-connect", () => {
         const gqlResult = await testHelper.executeGraphQL(query);
 
         expect(gqlResult.errors).toBeFalsy();
-
+        console.log(JSON.stringify(gqlResult, null, 2));
         expect(gqlResult.data).toEqual({
             [Actor.operations.update]: {
                 [Actor.plural]: expect.toIncludeSameMembers([
                     {
                         name: actorName,
+                        actedInConnection: {
+                            edges: expect.toIncludeSameMembers([
+                                {
+                                    node: {
+                                        title: movieTitle,
+                                    },
+                                    properties: {
+                                        screenTime: movieScreenTime,
+                                    },
+                                },
+                                {
+                                    node: {
+                                        title: movieTitle2,
+                                    },
+                                    properties: {
+                                        screenTime: movieScreenTime,
+                                    },
+                                },
+                            ]),
+                        },
                     },
                     {
                         name: actorName2,
+                        actedInConnection: {
+                            edges: [
+                                {
+                                    node: {
+                                        title: movieTitle2,
+                                    },
+                                    properties: {
+                                        screenTime: movieScreenTime,
+                                    },
+                                },
+                            ],
+                        },
                     },
                     {
                         name: actorName3,
+                        actedInConnection: {
+                            edges: [
+                                {
+                                    node: {
+                                        title: movieTitle,
+                                    },
+                                    properties: {
+                                        screenTime: 111,
+                                    },
+                                },
+                            ],
+                        },
                     },
                 ]),
             },
