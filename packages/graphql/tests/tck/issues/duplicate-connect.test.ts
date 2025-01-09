@@ -28,7 +28,7 @@ describe("issue/duplicate-connect", () => {
         typeDefs = /* GraphQL */ `
             type Movie @node {
                 title: String!
-                runtime: Int!
+                runtime: Int
                 actors: [Actor!]! @relationship(type: "ACTED_IN", direction: IN, properties: "ActedIn")
             }
 
@@ -38,7 +38,7 @@ describe("issue/duplicate-connect", () => {
 
             type Actor @node {
                 name: String!
-                actedIn: [Movie!]! @relationship(type: "ACTED_IN", direction: OUT, properties: "ActedIn")
+                movies: [Movie!]! @relationship(type: "ACTED_IN", direction: OUT, properties: "ActedIn")
             }
         `;
 
@@ -52,7 +52,7 @@ describe("issue/duplicate-connect", () => {
             mutation {
                 updateActors(
                     update: {
-                        actedIn: [
+                        movies: [
                             {
                                 where: { node: { title: { eq: "movie1" } } }
                                 update: {
@@ -73,7 +73,7 @@ describe("issue/duplicate-connect", () => {
                 ) {
                     actors {
                         name
-                        actedInConnection {
+                        moviesConnection {
                             edges {
                                 node {
                                     title
@@ -95,28 +95,28 @@ describe("issue/duplicate-connect", () => {
             WITH this
             CALL {
             	WITH this
-            	MATCH (this)-[this_acted_in0_relationship:ACTED_IN]->(this_actedIn0:Movie)
-            	WHERE this_actedIn0.title = $updateActors_args_update_actedIn0_where_this_actedIn0param0
+            	MATCH (this)-[this_acted_in0_relationship:ACTED_IN]->(this_movies0:Movie)
+            	WHERE this_movies0.title = $updateActors_args_update_movies0_where_this_movies0param0
             	WITH *
             	CALL {
-            		WITH this, this_actedIn0
-            		OPTIONAL MATCH (this_actedIn0_actors0_connect0_node:Actor)
-            		WHERE this_actedIn0_actors0_connect0_node.name = $this_actedIn0_actors0_connect0_node_param0
+            		WITH this, this_movies0
+            		OPTIONAL MATCH (this_movies0_actors0_connect0_node:Actor)
+            		WHERE this_movies0_actors0_connect0_node.name = $this_movies0_actors0_connect0_node_param0
             		CALL {
             			WITH *
-            			WITH this, collect(this_actedIn0_actors0_connect0_node) as connectedNodes, collect(this_actedIn0) as parentNodes
+            			WITH this, collect(this_movies0_actors0_connect0_node) as connectedNodes, collect(this_movies0) as parentNodes
             			CALL {
             				WITH connectedNodes, parentNodes
-            				UNWIND parentNodes as this_actedIn0
-            				UNWIND connectedNodes as this_actedIn0_actors0_connect0_node
-            				CREATE (this_actedIn0)<-[this_actedIn0_actors0_connect0_relationship:ACTED_IN]-(this_actedIn0_actors0_connect0_node)
-            				SET this_actedIn0_actors0_connect0_relationship.screenTime = $this_actedIn0_actors0_connect0_relationship_screenTime
+            				UNWIND parentNodes as this_movies0
+            				UNWIND connectedNodes as this_movies0_actors0_connect0_node
+            				CREATE (this_movies0)<-[this_movies0_actors0_connect0_relationship:ACTED_IN]-(this_movies0_actors0_connect0_node)
+            				SET this_movies0_actors0_connect0_relationship.screenTime = $this_movies0_actors0_connect0_relationship_screenTime
             			}
             		}
-            	WITH this, this_actedIn0, this_actedIn0_actors0_connect0_node
-            		RETURN count(*) AS connect_this_actedIn0_actors0_connect_Actor0
+            	WITH this, this_movies0, this_movies0_actors0_connect0_node
+            		RETURN count(*) AS connect_this_movies0_actors0_connect_Actor0
             	}
-            	RETURN count(*) AS update_this_actedIn0
+            	RETURN count(*) AS update_this_movies0
             }
             WITH *
             CALL {
@@ -132,21 +132,21 @@ describe("issue/duplicate-connect", () => {
                 }
                 RETURN { edges: update_var2, totalCount: totalCount } AS update_var3
             }
-            RETURN collect(DISTINCT this { .name, actedInConnection: update_var3 }) AS data"
+            RETURN collect(DISTINCT this { .name, moviesConnection: update_var3 }) AS data"
         `);
 
         expect(formatParams(result.params)).toMatchInlineSnapshot(`
             "{
-                \\"updateActors_args_update_actedIn0_where_this_actedIn0param0\\": \\"movie1\\",
-                \\"this_actedIn0_actors0_connect0_node_param0\\": \\"anotherActor\\",
-                \\"this_actedIn0_actors0_connect0_relationship_screenTime\\": {
+                \\"updateActors_args_update_movies0_where_this_movies0param0\\": \\"movie1\\",
+                \\"this_movies0_actors0_connect0_node_param0\\": \\"anotherActor\\",
+                \\"this_movies0_actors0_connect0_relationship_screenTime\\": {
                     \\"low\\": 111,
                     \\"high\\": 0
                 },
                 \\"updateActors\\": {
                     \\"args\\": {
                         \\"update\\": {
-                            \\"actedIn\\": [
+                            \\"movies\\": [
                                 {
                                     \\"where\\": {
                                         \\"node\\": {
