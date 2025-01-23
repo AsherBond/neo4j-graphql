@@ -9,13 +9,18 @@
     "@neo4j/package-tests": "1.0.0"
   },
   "changesets": [
+    "beige-beds-push",
     "beige-poets-move",
     "chatty-plants-dress",
     "clean-hairs-pretend",
     "clever-tomatoes-float",
     "cyan-grapes-laugh",
     "fair-elephants-yell",
+    "few-sloths-battle",
+    "fluffy-schools-promise",
     "four-insects-repeat",
+    "friendly-pigs-wait",
+    "good-sheep-refuse",
     "green-jobs-jam",
     "healthy-swans-shave",
     "khaki-roses-raise",
@@ -34,6 +39,7 @@
     "strong-jobs-eat",
     "tame-melons-confess",
     "ten-starfishes-attend",
+    "thick-dogs-provide",
     "unlucky-spoons-trade"
   ]
 }
